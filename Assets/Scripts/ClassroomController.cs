@@ -11,6 +11,7 @@ public class ClassroomController : MonoBehaviour
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.None;
+        
         //m_DefaultHighScoreText = m_HighScore.text;
     }
     public void Start()
