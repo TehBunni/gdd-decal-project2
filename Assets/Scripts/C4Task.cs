@@ -64,7 +64,8 @@ public class C4Task : MonoBehaviour
                 // Delete prefab
                 m_keypad_input.text = "Correct!";
                 //yield return new WaitForSeconds(3);
-                SceneManager.LoadScene("Classroom");
+                //GameObject c4 = .GetComponent<GameObject>();
+                //SceneManager.LoadScene("Classroom");
             }
             //Reset global array if 4 digits and then add the new digit
             else
