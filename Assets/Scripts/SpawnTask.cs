@@ -8,6 +8,9 @@ public class SpawnTask : MonoBehaviour
     #region Editor Variables
     [SerializeField]
     private GameObject taskObject;
+
+    [SerializeField]
+    private GameObject mainCamera;
     #endregion
 
     #region Main Updates
@@ -15,7 +18,9 @@ public class SpawnTask : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(taskObject);
+            Vector3 spawnPosition = mainCamera.transform.position;
+            spawnPosition.z = 0;
+            Instantiate(taskObject, spawnPosition, Quaternion.identity);
             // SceneManager.LoadScene (sceneName:"DoorTaskScene");
         }
     }

@@ -16,6 +16,8 @@ public class OpenAlarm : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private bool alarmOpen;
+
+    // private GameObject mainCamera;
     #endregion
 
     #region Initialization
