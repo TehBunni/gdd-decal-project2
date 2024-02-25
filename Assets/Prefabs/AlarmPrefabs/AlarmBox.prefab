@@ -104,6 +104,7 @@ MonoBehaviour:
   - {fileID: 3627022954682146179, guid: a1e127e308a744eb4a4e87fa3eaac19a, type: 3}
   - {fileID: 9179372932237484614, guid: b31f886f997a4415380856cb1504f8bb, type: 3}
   nextDialogue: {fileID: 8160452291392761617, guid: fb7cddd50065945aeaaedf6541a14914, type: 3}
+  clip: {fileID: 8300000, guid: d6c4ec9d648cd42758e9e203523e84a1, type: 3}
 --- !u!61 &5670705196228882015
 BoxCollider2D:
   m_ObjectHideFlags: 0

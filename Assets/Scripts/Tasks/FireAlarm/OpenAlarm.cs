@@ -16,6 +16,9 @@ public class OpenAlarm : MonoBehaviour
     [SerializeField]
     [Tooltip("Dialogue that spawns after the task is completed")]
     private GameObject nextDialogue;
+
+    private AudioSource source;
+    public AudioClip clip;
     #endregion
 
     #region Private Variables
@@ -39,6 +42,8 @@ public class OpenAlarm : MonoBehaviour
 
     // Canvas gameObject
     private GameObject canvas;
+
+    private int clickCount;
     #endregion
 
     #region Initialization
@@ -51,6 +56,8 @@ public class OpenAlarm : MonoBehaviour
         wireCount = 0;
         player = GameObject.Find("Player");
         canvas = GameObject.Find("Canvas");
+        source = GameObject.Find("gameManager").GetComponent<AudioSource>();
+        clickCount = 0;
     }
     #endregion
 
@@ -62,6 +69,7 @@ public class OpenAlarm : MonoBehaviour
         {
             spriteRenderer.sprite = openAlarmSprite;
             alarmOpen = true;
+            source.PlayOneShot(clip);
             // Instantiate all wires
             foreach (GameObject wire in alarmWires)
             {
@@ -98,6 +106,16 @@ public class OpenAlarm : MonoBehaviour
 
             Destroy(transform.parent.gameObject); // Destroy task
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && alarmOpen) {
+            clickCount++;
+        }
+
+        if (clickCount > 10) {
+            completed = true;
+        }
+
+        Debug.Log(clickCount);
     }
     #endregion
 }

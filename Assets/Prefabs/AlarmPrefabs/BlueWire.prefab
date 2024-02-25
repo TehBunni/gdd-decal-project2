@@ -33,6 +33,10 @@ PrefabInstance:
       value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 129484889362407415, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: abf33010e18c8430c939fbf2a858b395, type: 3}
+    - target: {fileID: 129484889362407415, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
       propertyPath: cutWireSprite
       value: 
       objectReference: {fileID: 21300000, guid: 4150df7d3a1254932a627211b9d8a59c, type: 3}

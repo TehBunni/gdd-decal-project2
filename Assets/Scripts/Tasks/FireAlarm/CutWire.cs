@@ -8,6 +8,9 @@ public class CutWire : MonoBehaviour
     [SerializeField]
     [Tooltip("Cut wire sprite")]
     private Sprite cutWireSprite;
+
+    private AudioSource source;
+    public AudioClip clip;
     #endregion
 
     #region Private Variables
@@ -27,6 +30,7 @@ public class CutWire : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         alarmBox = GameObject.Find("AlarmBox");
         cut = false;
+        source = GameObject.Find("gameManager").GetComponent<AudioSource>();
     }
     #endregion
 
@@ -38,6 +42,7 @@ public class CutWire : MonoBehaviour
             cut = true;
             spriteRenderer.sprite = cutWireSprite;
             alarmBox.GetComponent<OpenAlarm>().IncrementWireCount();
+            source.PlayOneShot(clip);
         }
     }
     #endregion

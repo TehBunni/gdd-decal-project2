@@ -8,6 +8,9 @@ public class LockRotation : MonoBehaviour
     [SerializeField]
     [Tooltip("Dialogue that spawns after the task is completed")]
     private GameObject nextDialogue;
+
+    private AudioSource source;
+    public AudioClip clip;
     #endregion
 
     #region Private Variables
@@ -30,6 +33,7 @@ public class LockRotation : MonoBehaviour
         completed = false;
         player = GameObject.Find("Player");
         canvas = GameObject.Find("Canvas");
+        source = GameObject.Find("gameManager").GetComponent<AudioSource>();
     }
     #endregion
 
@@ -54,6 +58,8 @@ public class LockRotation : MonoBehaviour
         // Triggers when task is completed
         if (completed)
         {
+            source.PlayOneShot(clip);
+
             // Increment current task number
             gameManager.Singleton.IncrementCount();
             Debug.Log("Current count: " + gameManager.Singleton.TasksCompleted);

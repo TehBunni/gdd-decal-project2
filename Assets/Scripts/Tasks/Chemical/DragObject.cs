@@ -16,6 +16,9 @@ public class DragObject : MonoBehaviour
     [SerializeField]
     [Tooltip("Dialogue that spawns after the task is completed")]
     private GameObject nextDialogue;
+
+    private AudioSource source;
+    public AudioClip clipExplosion;
     #endregion
 
     #region Private Variables
@@ -33,6 +36,7 @@ public class DragObject : MonoBehaviour
     private void Start()
     {
         canvas = GameObject.Find("Canvas");
+        source = GameObject.Find("gameManager").GetComponent<AudioSource>();
     }
     #endregion
 
@@ -59,7 +63,16 @@ public class DragObject : MonoBehaviour
 		if (other.gameObject.CompareTag("Water") && !isDragging)
 		{
 			Instantiate(explosion, transform.parent.gameObject.transform); // Instantiate explosion
-            Instantiate(brokenBeaker, transform.parent.gameObject.transform); // Instantiate broken beaker
+            
+             // Instantiate broken beaker
+            Vector3 spawnPosition = brokenBeaker.gameObject.transform.position + transform.parent.gameObject.transform.position;
+            spawnPosition.z = 0;
+            GameObject newBeaker = Instantiate(brokenBeaker, spawnPosition, Quaternion.identity);
+            newBeaker.transform.parent = transform.parent.gameObject.transform;
+            // Instantiate(brokenBeaker, transform.parent.gameObject.transform);
+
+            source.PlayOneShot(clipExplosion);
+
             Destroy(other.gameObject); // destory beaker
             Destroy(gameObject); // destroy sodium
 
