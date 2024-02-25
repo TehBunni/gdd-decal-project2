@@ -19,6 +19,12 @@ public class C4Task : MonoBehaviour
     public TextMeshProUGUI m_keypad_input;
     //m_Button1 = new Button();
 
+    [SerializeField]
+    private GameObject explosion;
+
+    [SerializeField]
+    private GameObject c4;
+
     #endregion
 
 
@@ -63,6 +69,8 @@ public class C4Task : MonoBehaviour
                 //TO DO: In between switching scenes there should be a 'you did it!'
                 // Delete prefab
                 m_keypad_input.text = "Correct!";
+                c4.SetActive(false);
+                Instantiate(explosion, new Vector3(0, 0, 0), Quaternion.identity);
                 //yield return new WaitForSeconds(3);
                 //GameObject c4 = .GetComponent<GameObject>();
                 //SceneManager.LoadScene("Classroom");

@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: -1304323083
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0ae58aacb191c4e61bd8a7ef86feca47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,6 +103,8 @@ MonoBehaviour:
   - {fileID: 1209833700460921879, guid: 29c6cb3d0acbb4343b2064cd7f85dbe0, type: 3}
   - {fileID: 3627022954682146179, guid: a1e127e308a744eb4a4e87fa3eaac19a, type: 3}
   - {fileID: 9179372932237484614, guid: b31f886f997a4415380856cb1504f8bb, type: 3}
+  nextDialogue: {fileID: 8160452291392761617, guid: fb7cddd50065945aeaaedf6541a14914, type: 3}
+  clip: {fileID: 8300000, guid: d6c4ec9d648cd42758e9e203523e84a1, type: 3}
 --- !u!61 &5670705196228882015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,7 +134,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.05, y: 0}

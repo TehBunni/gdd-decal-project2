@@ -15,9 +15,17 @@ public class gameManager : MonoBehaviour
         }
     }
 
+    public AudioSource source;
+    // public AudioClip clip;
+    public AudioClip click;
+
     private void Awake()
     {
         _Singleton = this;
+    }
+
+    private void Start() {
+        // source.PlayOneShot(clip);
     }
 
     private int tasksCompleted;
@@ -28,5 +36,13 @@ public class gameManager : MonoBehaviour
     public void IncrementCount()
     {
         tasksCompleted++;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            source.PlayOneShot(click);
+        }
     }
 }
