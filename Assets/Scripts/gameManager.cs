@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [DisallowMultipleComponent]
 public class gameManager : MonoBehaviour
@@ -43,6 +44,11 @@ public class gameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             source.PlayOneShot(click);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && gameManager.Singleton.TasksCompleted == 11)
+        {
+            SceneManager.LoadScene("EndingScene");
         }
     }
 }

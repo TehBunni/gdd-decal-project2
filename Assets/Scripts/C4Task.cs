@@ -71,6 +71,11 @@ public class C4Task : MonoBehaviour
                 m_keypad_input.text = "Correct!";
                 c4.SetActive(false);
                 Instantiate(explosion, new Vector3(0, 0, 0), Quaternion.identity);
+
+                // Increment task number
+                gameManager.Singleton.IncrementCount();
+                Debug.Log("Current count: " + gameManager.Singleton.TasksCompleted);
+
                 //yield return new WaitForSeconds(3);
                 //GameObject c4 = .GetComponent<GameObject>();
                 //SceneManager.LoadScene("Classroom");
