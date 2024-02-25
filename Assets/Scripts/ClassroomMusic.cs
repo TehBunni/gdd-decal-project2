@@ -9,9 +9,12 @@ public class ClassroomMusic : MonoBehaviour
     public AudioClip snore;
     public AudioClip stress;
     private bool nowStress;
+    private bool nowExplode;
+    public AudioClip explode;
     void Start()
     {
         nowStress = false;
+        nowExplode = false;
         source.clip = clip;
         source.Play();
         source.PlayOneShot(snore);
@@ -24,6 +27,15 @@ public class ClassroomMusic : MonoBehaviour
             source.Stop();
             source.volume = 0.5f;
             source.clip = stress;
+            source.Play();
+        }
+
+        if (gameManager.Singleton.TasksCompleted == 11 && !nowExplode)
+        {
+            nowExplode = true;
+            source.Stop();
+            source.volume = 0.5f;
+            source.clip = explode;
             source.Play();
         }
     }

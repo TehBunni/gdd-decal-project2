@@ -330,6 +330,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: a8047bdeaac344a4ca25aee0c786b9e3, type: 3}
   snore: {fileID: 8300000, guid: 02c80978a3e874223a08cc3f1e18f4e1, type: 3}
   stress: {fileID: 8300000, guid: 6fb9a161edf92486a95230ee950d1548, type: 3}
+  explode: {fileID: 8300000, guid: b68bd411abb5148b8be52b3011e0a3a1, type: 3}
 --- !u!1001 &43067732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -405,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 3925554533543497294, guid: 03e71ddc2f8d8400d9119e19b76c2497, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 5494160157180827528, guid: 5715b42524df54a798d73cf42c4f5123, type: 3}
+      objectReference: {fileID: 1923877624351586017, guid: bc3f24ec9c2754d76bbb89874750ae2a, type: 3}
     - target: {fileID: 4649407874130068536, guid: 03e71ddc2f8d8400d9119e19b76c2497, type: 3}
       propertyPath: m_SizeDelta.x
       value: 66.84

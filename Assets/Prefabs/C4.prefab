@@ -1546,3 +1546,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_keypad_input: {fileID: 5560948297698179544}
+  explosion: {fileID: 1923877624351586017, guid: bc3f24ec9c2754d76bbb89874750ae2a, type: 3}
+  c4: {fileID: 0}

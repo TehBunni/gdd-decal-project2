@@ -39,7 +39,7 @@ public class C4Task : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
     }
-    
+
     private void OnEnable()
     {
         m_keypad_input.text = string.Empty;

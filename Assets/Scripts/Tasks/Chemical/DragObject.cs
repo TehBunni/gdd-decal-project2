@@ -62,7 +62,7 @@ public class DragObject : MonoBehaviour
     private void OnCollisionStay2D(Collision2D other) {
 		if (other.gameObject.CompareTag("Water") && !isDragging)
 		{
-			Instantiate(explosion, transform.parent.gameObject.transform); // Instantiate explosion
+			// Instantiate(explosion, transform.parent.gameObject.transform); // Instantiate explosion
             
              // Instantiate broken beaker
             Vector3 spawnPosition = brokenBeaker.gameObject.transform.position + transform.parent.gameObject.transform.position;
