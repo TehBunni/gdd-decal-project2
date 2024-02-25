@@ -12,7 +12,7 @@ public class HUDController : MonoBehaviour
     #endregion
 
     #region Private Variables
-    private int p_TasksCompleted;
+    public int p_TasksCompleted;
     #endregion
 
     #region Public Variables

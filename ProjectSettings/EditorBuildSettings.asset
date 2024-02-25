@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 9b61c6f964ea7425780485b808330d50
   - enabled: 1
     path: Assets/Scenes/Classroom.unity
-    guid: 704d11a4492d4465f8c631143c1e6af6
+    guid: 5b7ea2813eb0a43d59a06eafebc635d4
   - enabled: 1
     path: Assets/Scenes/C4Task.unity
     guid: 0ba0845a7e90f4fd28ac85aac8451e05
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlarmTaskScene.unity
     guid: a63478dcaa1d74d2ead7ef7a3afcccf8
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: 650ecdd072a404c3e86fb48337fee72b
   m_configObjects: {}

@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 273024645}
   - component: {fileID: 273024644}
   - component: {fileID: 273024647}
+  - component: {fileID: 273024648}
   m_Layer: 5
   m_Name: Poster Button
   m_TagString: Untagged
@@ -258,6 +259,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskObject: {fileID: 0}
   mainCamera: {fileID: 0}
+--- !u!223 &273024648
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273024642}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &451753895
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +513,8 @@ GameObject:
   - component: {fileID: 592446611}
   - component: {fileID: 592446610}
   - component: {fileID: 592446609}
+  - component: {fileID: 592446612}
+  - component: {fileID: 592446613}
   m_Layer: 5
   m_Name: Lab Table Button
   m_TagString: Untagged
@@ -597,6 +623,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592446607}
   m_CullTransparentMesh: 1
+--- !u!223 &592446612
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592446607}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
+--- !u!114 &592446613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592446607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf6d83768b0c4533817e7b36cf69539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskObject: {fileID: 0}
+  mainCamera: {fileID: 0}
 --- !u!1 &603099007
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +748,7 @@ GameObject:
   - component: {fileID: 698868913}
   - component: {fileID: 698868912}
   - component: {fileID: 698868915}
+  - component: {fileID: 698868916}
   m_Layer: 5
   m_Name: Door Button
   m_TagString: Untagged
@@ -819,6 +883,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskObject: {fileID: 0}
   mainCamera: {fileID: 0}
+--- !u!223 &698868916
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698868910}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &804872343
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +994,7 @@ GameObject:
   - component: {fileID: 810707703}
   - component: {fileID: 810707702}
   - component: {fileID: 810707705}
+  - component: {fileID: 810707706}
   m_Layer: 6
   m_Name: Teacher Desk Button
   m_TagString: Untagged
@@ -1041,6 +1129,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskObject: {fileID: 7557327232045721675, guid: 03e71ddc2f8d8400d9119e19b76c2497, type: 3}
   mainCamera: {fileID: 1197249119}
+--- !u!223 &810707706
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810707700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &880193060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1267,7 @@ GameObject:
   - component: {fileID: 1148465327}
   - component: {fileID: 1148465326}
   - component: {fileID: 1148465329}
+  - component: {fileID: 1148465330}
   m_Layer: 5
   m_Name: 'Fire Alarm Button '
   m_TagString: Untagged
@@ -1290,6 +1402,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskObject: {fileID: 0}
   mainCamera: {fileID: 0}
+--- !u!223 &1148465330
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148465324}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &1162060579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52285cada0f194df68531ff02a17a0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p_TasksCompleted: 0
   HUDTasks:
   - {fileID: 804872345}
   - {fileID: 804872345}
@@ -1699,7 +1835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a65c160daf56b457f80c04692012e791, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8af3505a39234da69e4f640b90050b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
