@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Clickable
   - Water
+  - CanvasElement
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1655773537
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 3053935015
+    locked: 0
+  - name: Buttons
+    uniqueID: 2334879397
+    locked: 0
+  - name: Tasks
+    uniqueID: 2990644213
+    locked: 0
+  - name: UI
+    uniqueID: 4231497771
     locked: 0

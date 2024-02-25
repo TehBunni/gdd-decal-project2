@@ -6,12 +6,34 @@ public class DragObject : MonoBehaviour
 {
     #region Editor Variables
     [SerializeField]
+    [Tooltip("Explosion gameObject")]
     private GameObject explosion;
+
+    [SerializeField]
+    [Tooltip("Broken Beaker gameObject")]
+    private GameObject brokenBeaker;
+
+    [SerializeField]
+    [Tooltip("Dialogue that spawns after the task is completed")]
+    private GameObject nextDialogue;
     #endregion
 
     #region Private Variables
+    // Tracks if the gameObject is being dragged
     private bool isDragging = false;
+    
+    // Tracks the offset of the mouse click on the gameObject
     private Vector3 offset;
+
+    // Canvas gameObject
+    private GameObject canvas;
+    #endregion
+
+    #region Initialization
+    private void Start()
+    {
+        canvas = GameObject.Find("Canvas");
+    }
     #endregion
 
     #region Main Updates
@@ -36,9 +58,12 @@ public class DragObject : MonoBehaviour
     private void OnCollisionStay2D(Collision2D other) {
 		if (other.gameObject.CompareTag("Water") && !isDragging)
 		{
-			Instantiate(explosion);
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+			Instantiate(explosion, transform.parent.gameObject.transform); // Instantiate explosion
+            Instantiate(brokenBeaker, transform.parent.gameObject.transform); // Instantiate broken beaker
+            Destroy(other.gameObject); // destory beaker
+            Destroy(gameObject); // destroy sodium
+
+            Instantiate(nextDialogue, canvas.transform); // Spawn reaction dialogue
 		}
 	}
     #endregion

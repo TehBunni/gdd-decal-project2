@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     #region Editor Variables
+    [SerializeField]
     private float playerSpeed;
     #endregion
     
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float moveX;
     private float moveY;
+
+    private bool canMove;
     #endregion
 
     #region Initialization
@@ -27,13 +30,14 @@ public class PlayerMovement : MonoBehaviour
         
         moveX = 0f;
         moveY = 0f;
-        playerSpeed = 10f;
+
+        canMove = true;
     }
     #endregion
 
     #region Main Updates
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // if (Input.GetKey(KeyCode.UpArrow))
         // {
@@ -74,7 +78,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) moveX = +1f;
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
-        transform.position += moveDir * playerSpeed * Time.deltaTime;
+        if (canMove)
+        {
+            transform.position += moveDir * playerSpeed * Time.deltaTime;
+        }
+    }
+
+    public void ToggleMove()
+    {
+        canMove = !canMove;
     }
     #endregion
 }

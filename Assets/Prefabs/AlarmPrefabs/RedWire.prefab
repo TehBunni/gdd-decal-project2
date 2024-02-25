@@ -17,6 +17,10 @@ PrefabInstance:
       value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 103274479282707783, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 103274479282707783, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.19
       objectReference: {fileID: 0}
@@ -37,8 +41,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f57bb60ecf1874c5c90b5e72244f6e48, type: 3}
     - target: {fileID: 8370761982022458198, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370761982022458198, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370761982022458198, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1304323083
       objectReference: {fileID: 0}
     - target: {fileID: 9001315787237709779, guid: 35aa6096e66664ecc84be272dae5ad90, type: 3}
       propertyPath: m_LocalScale.x

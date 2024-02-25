@@ -5,20 +5,35 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
-    public float textSpeed;
+    #region Editor Variables
+    [SerializeField]
+    [Tooltip("TextMeshProUGUI component in dialogue gameObject")]
+    private TextMeshProUGUI textComponent;
 
+    [SerializeField]
+    [Tooltip("Dialogue lines")]
+    private string[] lines;
+
+    [SerializeField]
+    [Tooltip("Speed of text typing animation (1-100)")]
+    private float textSpeed;
+    #endregion
+
+    #region Private Variables
+    // Keeps track of the current dialogue line
     private int index;
-    // Start is called before the first frame update
-    void Start()
+    #endregion
+
+    #region Initialization
+    private void Start()
     {
         textComponent.text = string.Empty;
         StartDialogue();
     }
+    #endregion
 
-    // Update is called once per frame
-    void Update()
+    #region Main Updates
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -40,6 +55,7 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(TypeLine());
     }
 
+    // Typing animation
     IEnumerator TypeLine()
     {
         foreach (char c in lines[index].ToCharArray())
@@ -49,6 +65,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    // Move on to the next dialogue line
     void NextLine()
     {
         if (index < lines.Length - 1)
@@ -56,10 +73,25 @@ public class Dialogue : MonoBehaviour
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
+
+            // Incremenet task number
+            if (index == lines.Length - 1)
+            {
+                gameManager.Singleton.IncrementCount();
+                Debug.Log("Current count: " + gameManager.Singleton.TasksCompleted);
+            }
+
+            // Incremenet task number after chemical explosion
+            if (index == 3 && lines[3] == "[Mr. Rocks]: You clearly weren’t… step away from the lab station.")
+            {
+                gameManager.Singleton.IncrementCount();
+                Debug.Log("Current count: " + gameManager.Singleton.TasksCompleted);
+            }
         }
         else
         {
             gameObject.SetActive(false);
         }
     }
+    #endregion
 }
